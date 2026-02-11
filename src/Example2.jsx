@@ -4,6 +4,7 @@ import './Example2.css';
 function Example2() {
     const [openFaq, setOpenFaq] = useState(0);
     const [alertOpen, setAlertOpen] = useState(true);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleFaq = (i) => setOpenFaq(openFaq === i ? -1 : i);
 
@@ -45,23 +46,41 @@ function Example2() {
                         </div>
                     </div>
                     <div className="header-right2">
-                        <a href="#" className="btn-blue2">Přihlásit se</a>
-                        <a href="#" className="header-lang">English</a>
+                        <a href="#" className="btn-blue2 hide-mobile">Přihlásit se</a>
+                        <a href="#" className="header-lang hide-mobile">English</a>
+                        <button
+                            className="hamburger-btn"
+                            type="button"
+                            onClick={() => setMenuOpen(!menuOpen)}
+                            aria-expanded={menuOpen}
+                            aria-controls="mobile-nav"
+                            aria-label={menuOpen ? 'Zavřít menu' : 'Otevřít menu'}
+                        >
+                            <span className={`hamburger-icon ${menuOpen ? 'open' : ''}`}>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
                     </div>
                 </div>
             </header>
 
             {/* ===== NAV ===== */}
-            <nav className="main-nav2" aria-label="Hlavní navigace">
+            <nav className={`main-nav2 ${menuOpen ? 'nav-open' : ''}`} aria-label="Hlavní navigace" id="mobile-nav">
                 <div className="container2">
                     <ul className="nav-list2" role="menubar">
-                        <li role="none"><a href="#" role="menuitem" aria-current="page" className="active">Úvod</a></li>
-                        <li role="none"><a href="#" role="menuitem">Povodňové plány</a></li>
-                        <li role="none"><a href="#" role="menuitem">Záplavová území</a></li>
-                        <li role="none"><a href="#" role="menuitem">Směrnice</a></li>
-                        <li role="none"><a href="#" role="menuitem">Dokumenty</a></li>
-                        <li role="none"><a href="#" role="menuitem">Kontakty</a></li>
+                        <li role="none"><a href="#" role="menuitem" aria-current="page" className="active" onClick={() => setMenuOpen(false)}>Úvod</a></li>
+                        <li role="none"><a href="#" role="menuitem" onClick={() => setMenuOpen(false)}>Povodňové plány</a></li>
+                        <li role="none"><a href="#" role="menuitem" onClick={() => setMenuOpen(false)}>Záplavová území</a></li>
+                        <li role="none"><a href="#" role="menuitem" onClick={() => setMenuOpen(false)}>Směrnice</a></li>
+                        <li role="none"><a href="#" role="menuitem" onClick={() => setMenuOpen(false)}>Dokumenty</a></li>
+                        <li role="none"><a href="#" role="menuitem" onClick={() => setMenuOpen(false)}>Kontakty</a></li>
                     </ul>
+                    <div className="mobile-nav-extras">
+                        <a href="#" className="btn-blue2">Přihlásit se</a>
+                        <a href="#" className="header-lang">English</a>
+                    </div>
                 </div>
             </nav>
 

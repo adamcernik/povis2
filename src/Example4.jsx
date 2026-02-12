@@ -39,8 +39,9 @@ function Example4() {
                     <div className="emergency-banner4" role="alert">
                         <div className="c4 emergency-inner4">
                             <span className="emergency-text4">
-                                <strong>⚠ Zvýšený povodňový stupeň</strong> — Na řece Moravě byl vyhlášen 3. stupeň povodňové aktivity.
-                                <a href="#">Zobrazit detail →</a>
+                                <strong>⚠ Zvýšený povodňový stupeň</strong>
+                                <span className="emergency-detail4"> — 3. stupeň povodňové aktivity na řece Moravě.</span>
+                                <a href="#">Detail →</a>
                             </span>
                             <button
                                 className="emergency-close4"
@@ -57,12 +58,9 @@ function Example4() {
                     <div className="c4 header-inner4">
                         <div className="header-left4">
                             <a href="/" className="header-logo4" aria-label="POVIS2 – přejít na úvodní stránku">
-                                <div className="header-logo-icon4" aria-hidden="true">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                                        <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" fill="white" opacity="0.9" />
-                                    </svg>
-                                </div>
                                 <span className="header-logo-text4">POVIS2</span>
+                                <span className="header-logo-divider4" aria-hidden="true">|</span>
+                                <span className="header-tagline4">Povodňový informační systém</span>
                             </a>
                         </div>
                         <div className="header-right4">
@@ -118,7 +116,7 @@ function Example4() {
                             </li>
                             <li className="nav-item4" role="none">
                                 <a href="#" role="menuitem">
-                                    Plánování a území <span className="nav-chevron4" aria-hidden="true">▼</span>
+                                    Plánování a území <span className="nav-chevron4" aria-hidden="true"><svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
                                 </a>
                                 <div className="mega-dropdown4" role="menu" aria-label="Plánování a území podmenu">
                                     <a href="#" className="mega-link4" role="menuitem" onClick={() => setMenuOpen(false)}>
@@ -137,7 +135,7 @@ function Example4() {
                             </li>
                             <li className="nav-item4" role="none">
                                 <a href="#" role="menuitem">
-                                    Mapový portál <span className="nav-chevron4" aria-hidden="true">▼</span>
+                                    Mapový portál <span className="nav-chevron4" aria-hidden="true"><svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
                                 </a>
                                 <div className="mega-dropdown4" role="menu" aria-label="Mapový portál podmenu">
                                     <a href="#" className="mega-link4" role="menuitem" onClick={() => setMenuOpen(false)}>
@@ -156,7 +154,7 @@ function Example4() {
                             </li>
                             <li className="nav-item4" role="none">
                                 <a href="#" role="menuitem">
-                                    Aktuální situace <span className="nav-chevron4" aria-hidden="true">▼</span>
+                                    Aktuální situace <span className="nav-chevron4" aria-hidden="true"><svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
                                 </a>
                                 <div className="mega-dropdown4" role="menu" aria-label="Aktuální situace podmenu">
                                     <a href="#" className="mega-link4" role="menuitem" onClick={() => setMenuOpen(false)}>
@@ -175,7 +173,7 @@ function Example4() {
                             </li>
                             <li className="nav-item4" role="none">
                                 <a href="#" role="menuitem">
-                                    Podpora a info <span className="nav-chevron4" aria-hidden="true">▼</span>
+                                    Podpora a info <span className="nav-chevron4" aria-hidden="true"><svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
                                 </a>
                                 <div className="mega-dropdown4" role="menu" aria-label="Podpora a info podmenu">
                                     <a href="#" className="mega-link4" role="menuitem" onClick={() => setMenuOpen(false)}>

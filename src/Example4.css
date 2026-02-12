@@ -2,6 +2,7 @@
 
 :root {
     --p-blue: #4a7ec7;
+    --p-blue-text: #3b6db5;
     --p-blue-soft: #e8f0fa;
     --p-blue-muted: #a3c4e9;
     --p-blue-deep: #3565a8;
@@ -18,10 +19,12 @@
     --p-sky: #8ec8e8;
     --p-sky-soft: #e8f4fa;
     --p-amber: #e8a838;
+    --p-amber-text: #9a7210;
     --p-amber-soft: #fef5e0;
     --p-red: #d06060;
     --p-red-soft: #fceaea;
     --p-green: #5ea87a;
+    --p-green-text: #457d5c;
     --p-green-soft: #e8f5ed;
     --p-gray-50: #fafbfc;
     --p-gray-100: #f3f4f6;
@@ -204,7 +207,7 @@ body {
 }
 
 a {
-    color: var(--p-blue);
+    color: var(--p-blue-text);
     text-decoration: none;
     transition: color var(--p-transition);
 }
@@ -236,6 +239,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .header-left4 {
@@ -247,35 +251,60 @@ a:hover {
 .header-logo4 {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.65rem;
     text-decoration: none;
     color: var(--p-gray-900);
     flex-shrink: 0;
 }
 
-.header-logo-icon4 {
-    width: 36px;
-    height: 36px;
-    background: linear-gradient(135deg, var(--p-blue), var(--p-mint));
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(74, 126, 199, 0.2);
-    transition: transform var(--p-transition), box-shadow var(--p-transition);
+.header-logo4:hover {
+    text-decoration: none;
 }
 
-.header-logo4:hover .header-logo-icon4 {
-    box-shadow: 0 4px 16px rgba(74, 126, 199, 0.3);
+.header-povis-logo4 {
+    height: 32px;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+}
+
+.header-mzp-logo4 {
+    height: 28px;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+}
+
+.header-logo-divider4 {
+    color: var(--p-gray-300);
+    font-weight: 300;
+    font-size: 1.2rem;
+    user-select: none;
 }
 
 .header-logo-text4 {
     font-weight: 800;
-    font-size: 1.15rem;
+    font-size: 1.35rem;
     background: linear-gradient(135deg, var(--p-blue), var(--p-blue-deep));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    letter-spacing: -0.02em;
+}
+
+
+.header-tagline4 {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--p-gray-500);
+    letter-spacing: 0.02em;
+}
+
+.header-logo-sub4 {
+    font-size: 0.62rem;
+    font-weight: 500;
+    color: var(--p-gray-500);
+    letter-spacing: 0.01em;
 }
 
 .header-right4 {
@@ -342,7 +371,7 @@ a:hover {
 
 .lang-chevron4 {
     font-size: 0.5rem;
-    color: var(--p-gray-400);
+    color: var(--p-gray-500);
     margin-left: 0.1rem;
 }
 
@@ -422,7 +451,7 @@ a:hover {
 
 .nav-list4 {
     display: flex;
-    gap: 0;
+    gap: 0.75rem;
     height: 48px;
 }
 
@@ -433,26 +462,28 @@ a:hover {
 .nav-item4>a {
     display: flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.35rem;
     height: 48px;
-    padding: 0 1.1rem;
+    padding: 0 0.5rem;
     font-size: 0.87rem;
-    font-weight: 600;
-    color: var(--p-gray-500);
+    font-weight: 500;
+    color: var(--p-gray-600);
     text-decoration: none;
-    border-bottom: 2.5px solid transparent;
+    border-bottom: 2px solid transparent;
     transition: all var(--p-transition);
+    white-space: nowrap;
 }
 
 .nav-item4>a:hover,
 .nav-item4>a.active {
-    color: var(--p-blue);
+    color: var(--p-blue-text);
     border-bottom-color: var(--p-blue);
 }
 
 .nav-chevron4 {
-    font-size: 0.55rem;
-    transition: transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    opacity: 0.55;
 }
 
 /* Mega dropdown */
@@ -504,7 +535,7 @@ a:hover {
 
 .mega-link4 span {
     font-size: 0.78rem;
-    color: var(--p-gray-400);
+    color: var(--p-gray-500);
     line-height: 1.35;
 }
 
@@ -536,7 +567,7 @@ a:hover {
     align-items: center;
     gap: 0.35rem;
     background: rgba(74, 126, 199, 0.1);
-    color: var(--p-blue);
+    color: var(--p-blue-text);
     font-size: 0.72rem;
     font-weight: 700;
     padding: 0.3rem 0.75rem;
@@ -583,7 +614,7 @@ a:hover {
 }
 
 .hero4-search-input::placeholder {
-    color: var(--p-gray-400);
+    color: var(--p-gray-500);
 }
 
 .hero4-search-input:focus {
@@ -654,7 +685,7 @@ a:hover {
     background: none;
     border: none;
     font-size: 1rem;
-    color: var(--p-gray-400);
+    color: var(--p-gray-500);
     cursor: pointer;
     padding: 0.25rem;
     border-radius: 6px;
@@ -764,15 +795,15 @@ a:hover {
 }
 
 .phase-before .phase-label4 {
-    color: var(--p-blue);
+    color: var(--p-blue-text);
 }
 
 .phase-during .phase-label4 {
-    color: var(--p-amber);
+    color: var(--p-amber-text);
 }
 
 .phase-after .phase-label4 {
-    color: var(--p-green);
+    color: var(--p-green-text);
 }
 
 .phase-card4 h3 {
@@ -807,7 +838,7 @@ a:hover {
 
 .phase-before .phase-btn4 {
     background: var(--p-blue-soft);
-    color: var(--p-blue);
+    color: var(--p-blue-text);
 }
 
 .phase-before .phase-btn4:hover {
@@ -818,7 +849,7 @@ a:hover {
 
 .phase-during .phase-btn4 {
     background: var(--p-amber-soft);
-    color: var(--p-amber);
+    color: var(--p-amber-text);
 }
 
 .phase-during .phase-btn4:hover {
@@ -829,7 +860,7 @@ a:hover {
 
 .phase-after .phase-btn4 {
     background: var(--p-green-soft);
-    color: var(--p-green);
+    color: var(--p-green-text);
 }
 
 .phase-after .phase-btn4:hover {
@@ -922,7 +953,7 @@ a:hover {
 
 .monitoring-tile4 p {
     font-size: 0.78rem;
-    color: var(--p-gray-400);
+    color: var(--p-gray-500);
     line-height: 1.4;
 }
 
@@ -962,14 +993,14 @@ a:hover {
 
 .footer-text4 {
     font-size: 0.82rem;
-    color: #b0b8c4;
+    color: #c8cfd8;
     line-height: 1.5;
 }
 
 .footer-link4 {
     display: block;
     font-size: 0.82rem;
-    color: #b0b8c4;
+    color: #c8cfd8;
     margin-bottom: 0.4rem;
     text-decoration: none;
     transition: all var(--p-transition);
@@ -987,7 +1018,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     font-size: 0.78rem;
-    color: #6b7280;
+    color: #9ca3af;
 }
 
 /* ===== HAMBURGER ===== */
@@ -1034,6 +1065,131 @@ a:hover {
 
 .hide-mobile4 {
     display: inline-flex;
+}
+
+/* ===== NEWS / AKTUALITY ===== */
+.news-grid4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.news-main4 {
+    background: white;
+    border-radius: var(--p-radius);
+    overflow: hidden;
+    box-shadow: var(--p-shadow-xs);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: all var(--p-transition);
+}
+
+.news-main4:hover {
+    box-shadow: var(--p-shadow-hover);
+    transform: translateY(-4px);
+}
+
+.news-main4 img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.news-main-body4 {
+    padding: 1.25rem 1.5rem;
+}
+
+.news-date4 {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--p-gray-500);
+    margin-bottom: 0.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.news-main-body4 h3 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin-bottom: 0.4rem;
+    line-height: 1.35;
+}
+
+.news-main-body4 h3 a {
+    color: var(--p-gray-900);
+    text-decoration: none;
+}
+
+.news-main-body4 h3 a:hover {
+    color: var(--p-blue);
+    text-decoration: none;
+}
+
+.news-main-body4 p {
+    font-size: 0.84rem;
+    color: var(--p-gray-500);
+    line-height: 1.55;
+}
+
+.news-side4 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.news-side-card4 {
+    background: white;
+    border-radius: var(--p-radius);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    box-shadow: var(--p-shadow-xs);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: all var(--p-transition);
+}
+
+.news-side-card4:hover {
+    box-shadow: var(--p-shadow-hover);
+    transform: translateY(-2px);
+}
+
+.news-side-card4 img {
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    object-fit: cover;
+    display: block;
+}
+
+.news-side-body4 {
+    padding: 0.85rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.news-side-body4 h4 {
+    font-size: 0.86rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    line-height: 1.35;
+}
+
+.news-side-body4 h4 a {
+    color: var(--p-gray-900);
+    text-decoration: none;
+}
+
+.news-side-body4 h4 a:hover {
+    color: var(--p-blue);
+    text-decoration: none;
+}
+
+.news-side-body4 p {
+    font-size: 0.78rem;
+    color: var(--p-gray-500);
+    line-height: 1.45;
 }
 
 /* ===== RESPONSIVE — TABLET ===== */
@@ -1127,6 +1283,23 @@ a:hover {
     .news-grid4 {
         grid-template-columns: 1fr;
     }
+
+    .emergency-banner4 {
+        font-size: 0.78rem;
+    }
+
+    .header-mzp-logo4,
+    .header-logo-divider4,
+    .header-tagline4 {
+        display: none;
+    }
+
+    .emergency-text4 {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
 /* ===== RESPONSIVE — MOBILE ===== */
@@ -1186,132 +1359,26 @@ a:hover {
     .news-main4 img {
         height: 180px;
     }
+
+    .emergency-banner4 {
+        font-size: 0.74rem;
+        padding: 0.5rem 0;
+    }
+
+    .emergency-detail4 {
+        display: none;
+    }
+
+    .emergency-text4 {
+        gap: 0.35rem;
+    }
+
+    .emergency-close4 {
+        font-size: 0.9rem;
+        padding: 0.15rem 0.3rem;
+    }
 }
 
-/* ===== NEWS / AKTUALITY ===== */
-.news-grid4 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
-}
-
-.news-main4 {
-    background: white;
-    border-radius: var(--p-radius);
-    overflow: hidden;
-    box-shadow: var(--p-shadow-xs);
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    transition: all var(--p-transition);
-}
-
-.news-main4:hover {
-    box-shadow: var(--p-shadow-hover);
-    transform: translateY(-4px);
-}
-
-.news-main4 img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    display: block;
-}
-
-.news-main-body4 {
-    padding: 1.25rem 1.5rem;
-}
-
-.news-date4 {
-    display: block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--p-gray-400);
-    margin-bottom: 0.35rem;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-}
-
-.news-main-body4 h3 {
-    font-size: 1.05rem;
-    font-weight: 800;
-    margin-bottom: 0.4rem;
-    line-height: 1.35;
-}
-
-.news-main-body4 h3 a {
-    color: var(--p-gray-900);
-    text-decoration: none;
-}
-
-.news-main-body4 h3 a:hover {
-    color: var(--p-blue);
-    text-decoration: none;
-}
-
-.news-main-body4 p {
-    font-size: 0.84rem;
-    color: var(--p-gray-500);
-    line-height: 1.55;
-}
-
-.news-side4 {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.news-side-card4 {
-    background: white;
-    border-radius: var(--p-radius);
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    box-shadow: var(--p-shadow-xs);
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    transition: all var(--p-transition);
-}
-
-.news-side-card4:hover {
-    box-shadow: var(--p-shadow-hover);
-    transform: translateY(-2px);
-}
-
-.news-side-card4 img {
-    width: 100%;
-    height: 100%;
-    min-height: 100px;
-    object-fit: cover;
-    display: block;
-}
-
-.news-side-body4 {
-    padding: 0.85rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.news-side-body4 h4 {
-    font-size: 0.86rem;
-    font-weight: 700;
-    margin-bottom: 0.2rem;
-    line-height: 1.35;
-}
-
-.news-side-body4 h4 a {
-    color: var(--p-gray-900);
-    text-decoration: none;
-}
-
-.news-side-body4 h4 a:hover {
-    color: var(--p-blue);
-    text-decoration: none;
-}
-
-.news-side-body4 p {
-    font-size: 0.78rem;
-    color: var(--p-gray-500);
-    line-height: 1.45;
-}
 
 /* ===== LOGIN MODAL ===== */
 .modal-overlay4 {
@@ -1454,7 +1521,7 @@ a:hover {
 
 .modal-sec-desc4 {
     font-size: 0.78rem;
-    color: var(--p-gray-400);
+    color: var(--p-gray-500);
     margin-bottom: 0.6rem;
     font-weight: 500;
 }
@@ -1557,7 +1624,7 @@ a:hover {
 
 .modal-note4 {
     font-size: 0.75rem;
-    color: var(--p-gray-400);
+    color: var(--p-gray-500);
     margin-top: 0.6rem;
     line-height: 1.4;
     text-align: center;

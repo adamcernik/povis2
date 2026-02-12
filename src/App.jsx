@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import Example1 from './Example1';
 import Example2 from './Example2';
+import Example3 from './Example3';
 
 function App() {
-  const [activeExample, setActiveExample] = useState(2);
+  const [activeExample, setActiveExample] = useState(3);
+
+  const examples = [1, 2, 3];
 
   return (
     <div>
@@ -14,51 +17,38 @@ function App() {
         right: '1rem',
         zIndex: 9999,
         display: 'flex',
-        gap: '0.5rem',
+        gap: '0.35rem',
         background: '#1f2937',
-        padding: '0.5rem 0.75rem',
+        padding: '0.4rem 0.6rem',
         borderRadius: '12px',
         boxShadow: '0 4px 20px rgba(0,0,0,0.25)',
       }}>
-        <button
-          onClick={() => setActiveExample(1)}
-          style={{
-            padding: '0.4rem 1rem',
-            borderRadius: '8px',
-            border: 'none',
-            cursor: 'pointer',
-            fontWeight: 600,
-            fontSize: '0.8rem',
-            fontFamily: 'Inter, system-ui, sans-serif',
-            background: activeExample === 1 ? '#2362a2' : 'transparent',
-            color: activeExample === 1 ? 'white' : '#9ca3af',
-            transition: 'all 0.15s',
-          }}
-          aria-pressed={activeExample === 1}
-        >
-          Example 1
-        </button>
-        <button
-          onClick={() => setActiveExample(2)}
-          style={{
-            padding: '0.4rem 1rem',
-            borderRadius: '8px',
-            border: 'none',
-            cursor: 'pointer',
-            fontWeight: 600,
-            fontSize: '0.8rem',
-            fontFamily: 'Inter, system-ui, sans-serif',
-            background: activeExample === 2 ? '#2362a2' : 'transparent',
-            color: activeExample === 2 ? 'white' : '#9ca3af',
-            transition: 'all 0.15s',
-          }}
-          aria-pressed={activeExample === 2}
-        >
-          Example 2
-        </button>
+        {examples.map((n) => (
+          <button
+            key={n}
+            onClick={() => setActiveExample(n)}
+            style={{
+              padding: '0.4rem 0.85rem',
+              borderRadius: '8px',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: 600,
+              fontSize: '0.78rem',
+              fontFamily: 'Inter, system-ui, sans-serif',
+              background: activeExample === n ? '#4a7ec7' : 'transparent',
+              color: activeExample === n ? 'white' : '#9ca3af',
+              transition: 'all 0.2s',
+            }}
+            aria-pressed={activeExample === n}
+          >
+            Ex {n}
+          </button>
+        ))}
       </div>
 
-      {activeExample === 1 ? <Example1 /> : <Example2 />}
+      {activeExample === 1 && <Example1 />}
+      {activeExample === 2 && <Example2 />}
+      {activeExample === 3 && <Example3 />}
     </div>
   );
 }

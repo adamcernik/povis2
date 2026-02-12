@@ -2,7 +2,18 @@ import { useState } from 'react';
 import './MapPage.css';
 
 function MapPage({ query, onBack }) {
-    const [sidebarTab, setSidebarTab] = useState('results'); // 'results' | 'layers' | null
+    const [sidebarTab, setSidebarTab] = useState('results');
+    const [lang, setLang] = useState('cs');
+    const [langOpen, setLangOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const selectLang = (l) => { setLang(l); setLangOpen(false); };
+    const toggleLayer = (key) => {
+        setLayers(prev => ({ ...prev, [key]: !prev[key] }));
+    };
+
+    const closeSidebar = () => setSidebarTab(null);
+
     const [layers, setLayers] = useState({
         zaplavova: true,
         osvpr: true,
@@ -12,37 +23,113 @@ function MapPage({ query, onBack }) {
         radar: false,
     });
 
-    const toggleLayer = (key) => {
-        setLayers(prev => ({ ...prev, [key]: !prev[key] }));
-    };
-
-    const closeSidebar = () => setSidebarTab(null);
-
     return (
         <div className="map-page4">
-            {/* ===== HEADER ===== */}
-            <header className="map-header4">
-                <div className="map-header-top4">
-                    <div className="map-header-left4">
-                        <a href="/" className="map-logo4" onClick={(e) => { e.preventDefault(); onBack(); }}>
-                            <div className="map-logo-icon4" aria-hidden="true">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z" fill="white" opacity="0.9" /></svg>
-                            </div>
-                            <span className="map-logo-text4">POVIS2</span>
+            {/* ===== HEADER (same as homepage) ===== */}
+            <header className="site-header4" role="banner">
+                <div className="c4 header-inner4">
+                    <div className="header-left4">
+                        <a href="/" className="header-logo4" aria-label="POVIS2 – přejít na úvodní stránku" onClick={(e) => { e.preventDefault(); onBack(); }}>
+                            <span className="header-logo-text4">POVIS2</span>
+                            <span className="header-logo-divider4" aria-hidden="true">|</span>
+                            <span className="header-tagline4">Povodňový informační systém</span>
                         </a>
-                        <button className="map-back-btn4" type="button" onClick={onBack}>
-                            ← <span className="back-text">Zpět na úvod</span>
-                        </button>
                     </div>
-                    <div className="map-header-right4">
-                        <button className="toolbar-btn4" type="button" aria-label="Nápověda">
-                            <span className="tb-icon">❓</span> Nápověda
+                    <div className="header-right4">
+                        <button type="button" className="btn-primary4 hide-mobile4" onClick={onBack}>← Zpět na úvod</button>
+                        <div className="lang-switcher4 hide-mobile4">
+                            <button
+                                className="lang-toggle4"
+                                type="button"
+                                onClick={() => setLangOpen(!langOpen)}
+                                aria-expanded={langOpen}
+                                aria-haspopup="true"
+                                aria-label="Vybrat jazyk"
+                            >
+                                <span className="lang-flag4">{lang === 'cs' ? '🇨🇿' : '🇬🇧'}</span>
+                                <span className="lang-label4">{lang === 'cs' ? 'CZ' : 'EN'}</span>
+                                <span className="lang-chevron4" aria-hidden="true">▼</span>
+                            </button>
+                            {langOpen && (
+                                <div className="lang-dropdown4" role="menu">
+                                    <button role="menuitem" className={lang === 'cs' ? 'active' : ''} onClick={() => selectLang('cs')} type="button">
+                                        <span>🇨🇿</span> Česky
+                                    </button>
+                                    <button role="menuitem" className={lang === 'en' ? 'active' : ''} onClick={() => selectLang('en')} type="button">
+                                        <span>🇬🇧</span> English
+                                    </button>
+                                </div>
+                            )}
+                        </div>
+                        <button
+                            className="hamburger-btn4"
+                            type="button"
+                            onClick={() => setMenuOpen(!menuOpen)}
+                            aria-expanded={menuOpen}
+                            aria-label={menuOpen ? 'Zavřít menu' : 'Otevřít menu'}
+                        >
+                            <span className={`hamburger-icon4 ${menuOpen ? 'open' : ''}`}>
+                                <span></span><span></span><span></span>
+                            </span>
                         </button>
                     </div>
                 </div>
+            </header>
 
-                {/* TOOLBAR */}
-                <div className="map-toolbar4">
+            {/* ===== MEGA NAV (same as homepage) ===== */}
+            <nav className={`main-nav4 ${menuOpen ? 'nav-open4' : ''}`} aria-label="Hlavní navigace">
+                <div className="c4">
+                    <ul className="nav-list4" role="menubar">
+                        <li className="nav-item4" role="none">
+                            <a href="#" role="menuitem" onClick={(e) => { e.preventDefault(); onBack(); }}>Úvod</a>
+                        </li>
+                        <li className="nav-item4" role="none">
+                            <a href="#" role="menuitem">
+                                Plánování a území <span className="nav-chevron4" aria-hidden="true"><svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
+                            </a>
+                            <div className="mega-dropdown4" role="menu">
+                                <a href="#" className="mega-link4" role="menuitem"><strong>Povodňové plány</strong><span>Registr plánů, metodika, exporty dat</span></a>
+                                <a href="#" className="mega-link4" role="menuitem"><strong>Směrnice (OsVPR)</strong><span>Úseky s rizikem, plány zvládání rizik</span></a>
+                                <a href="#" className="mega-link4" role="menuitem"><strong>Záplavová území</strong><span>Evidence a vymezení území</span></a>
+                            </div>
+                        </li>
+                        <li className="nav-item4" role="none">
+                            <a href="#" role="menuitem" className="active" aria-current="page">
+                                Mapový portál <span className="nav-chevron4" aria-hidden="true"><svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
+                            </a>
+                            <div className="mega-dropdown4" role="menu">
+                                <a href="#" className="mega-link4" role="menuitem"><strong>Interaktivní mapa ČR</strong><span>Celkový přehled všech vrstev</span></a>
+                                <a href="#" className="mega-link4" role="menuitem"><strong>Mapy záplavových území</strong><span>Specifické kompozice ZÚ</span></a>
+                                <a href="#" className="mega-link4" role="menuitem"><strong>Mapy rizik</strong><span>Mapové výstupy povodňové směrnice</span></a>
+                            </div>
+                        </li>
+                        <li className="nav-item4" role="none">
+                            <a href="#" role="menuitem">
+                                Aktuální situace <span className="nav-chevron4" aria-hidden="true"><svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
+                            </a>
+                            <div className="mega-dropdown4" role="menu">
+                                <a href="#" className="mega-link4" role="menuitem"><strong>Výstrahy a radar</strong><span>Aktuální data ČHMÚ v reálném čase</span></a>
+                                <a href="#" className="mega-link4" role="menuitem"><strong>Hlásná a předpovědní služba</strong><span>Průtoky a stavy na tocích</span></a>
+                                <a href="#" className="mega-link4" role="menuitem"><strong>Aktuality</strong><span>Věcné a technické novinky</span></a>
+                            </div>
+                        </li>
+                        <li className="nav-item4" role="none">
+                            <a href="#" role="menuitem">
+                                Podpora a info <span className="nav-chevron4" aria-hidden="true"><svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
+                            </a>
+                            <div className="mega-dropdown4" role="menu">
+                                <a href="#" className="mega-link4" role="menuitem"><strong>Praktický rádce</strong><span>Životní situace — před, při a po povodni</span></a>
+                                <a href="#" className="mega-link4" role="menuitem"><strong>Legislativa</strong><span>Právní předpisy v ochraně před povodněmi</span></a>
+                                <a href="#" className="mega-link4" role="menuitem"><strong>Dokumentace</strong><span>Uživatelské příručky a terminologie</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            {/* ===== MAP TOOLBAR ===== */}
+            <div className="map-toolbar-bar4">
+                <div className="c4 map-toolbar4">
                     <div className="map-search-bar4">
                         <span className="map-search-icon4" aria-hidden="true">🔍</span>
                         <input
@@ -78,7 +165,7 @@ function MapPage({ query, onBack }) {
                         <span className="tb-icon">📤</span> Export
                     </button>
                 </div>
-            </header>
+            </div>
 
             {/* ===== MAP ===== */}
             <div className="map-container4">

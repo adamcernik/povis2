@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.intro4-page {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #f7f9fc;
+    color: #374151;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ===== HERO ===== */
+.intro4-hero {
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+    background: white;
+    border-bottom: 1px solid #e8eaed;
+}
+
+.intro4-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #3b6db5;
+    background: #e8f0fa;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    margin-bottom: 1.25rem;
+}
+
+.intro4-hero h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+}
+
+.intro4-hero h1 span {
+    background: linear-gradient(135deg, #4a7ec7, #3565a8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.intro4-hero p {
+    font-size: 1rem;
+    color: #6b7280;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ===== CONTAINER ===== */
+.intro4-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ===== SECTION ===== */
+.intro4-section {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #e8eaed;
+}
+
+.intro4-section:last-child {
+    border-bottom: none;
+}
+
+.intro4-section-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #9ca3af;
+    margin-bottom: 0.5rem;
+}
+
+.intro4-section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1.25rem;
+}
+
+/* ===== COLOR PALETTE ===== */
+.intro4-colors {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.intro4-color-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.intro4-color-swatch {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.intro4-color-chip span {
+    font-size: 0.6rem;
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+/* Accent colors row */
+.intro4-colors-secondary {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.intro4-color-dot {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.6rem;
+    background: white;
+    border: 1px solid #e8eaed;
+    border-radius: 8px;
+}
+
+.intro4-color-dot i {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.intro4-color-dot span {
+    font-size: 0.68rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* ===== TYPOGRAPHY ===== */
+.intro4-type-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.intro4-type-sample {
+    font-weight: 700;
+    color: #111827;
+}
+
+.intro4-type-meta {
+    font-size: 0.72rem;
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+/* ===== COMPONENTS ===== */
+.intro4-comp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.intro4-comp-card {
+    background: white;
+    border: 1px solid #e8eaed;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.intro4-comp-card h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.3rem;
+}
+
+.intro4-comp-card p {
+    font-size: 0.72rem;
+    color: #6b7280;
+    line-height: 1.45;
+}
+
+/* ===== IA TREE ===== */
+.intro4-ia {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+}
+
+.intro4-ia-col {
+    background: white;
+    border: 1px solid #e8eaed;
+    border-radius: 12px;
+    padding: 0.85rem;
+}
+
+.intro4-ia-col h4 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #3b6db5;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.intro4-ia-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.intro4-ia-col li {
+    font-size: 0.7rem;
+    color: #6b7280;
+    padding: 0.2rem 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.intro4-ia-col li:last-child {
+    border-bottom: none;
+}
+
+/* ===== PRINCIPLES ===== */
+.intro4-principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.intro4-principle {
+    text-align: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e8eaed;
+}
+
+.intro4-principle-icon {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.intro4-principle h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.2rem;
+}
+
+.intro4-principle p {
+    font-size: 0.68rem;
+    color: #6b7280;
+    line-height: 1.45;
+}
+
+/* ===== CTA ===== */
+.intro4-cta {
+    text-align: center;
+    padding: 3rem 2rem 4rem;
+}
+
+.intro4-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 2.2rem;
+    background: linear-gradient(135deg, #4a7ec7, #3565a8);
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(74, 126, 199, 0.25);
+    font-family: inherit;
+}
+
+.intro4-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(74, 126, 199, 0.35);
+}
+
+.intro4-cta-sub {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-top: 0.75rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+    .intro4-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .intro4-comp-grid,
+    .intro4-principles {
+        grid-template-columns: 1fr;
+    }
+
+    .intro4-ia {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

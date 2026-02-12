@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import './Example4.css';
 
 /* ===== MAP PAGE LAYOUT ===== */
 .map-page4 {
@@ -10,92 +11,18 @@
     color: #111827;
 }
 
-/* Reuse header styles from Example4 */
-.map-header4 {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    padding: 0;
-    z-index: 100;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+/* ===== MAP TOOLBAR BAR ===== */
+.map-toolbar-bar4 {
+    background: #f7f9fc;
+    border-bottom: 1px solid #e8eaed;
     flex-shrink: 0;
 }
 
-.map-header-top4 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.6rem 1.5rem;
-}
-
-.map-header-left4 {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.map-logo4 {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: #111827;
-}
-
-.map-logo-icon4 {
-    width: 32px;
-    height: 32px;
-    background: linear-gradient(135deg, #4a7ec7, #86c9b8);
-    border-radius: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.map-logo-text4 {
-    font-weight: 800;
-    font-size: 1.05rem;
-    background: linear-gradient(135deg, #4a7ec7, #3565a8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.map-back-btn4 {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    padding: 0.35rem 0.85rem;
-    background: #f3f4f6;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: #6b7280;
-    cursor: pointer;
-    font-family: inherit;
-    transition: all 0.2s;
-}
-
-.map-back-btn4:hover {
-    background: #e8eaed;
-    color: #374151;
-}
-
-.map-header-right4 {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-/* ===== MAP TOOLBAR ===== */
 .map-toolbar4 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 1.5rem;
-    background: #f7f9fc;
-    border-top: 1px solid #f3f4f6;
+    padding: 0.5rem 0;
 }
 
 .map-search-bar4 {

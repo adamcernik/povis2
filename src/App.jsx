@@ -3,11 +3,13 @@ import Example1 from './Example1';
 import Example2 from './Example2';
 import Example3 from './Example3';
 import Example4 from './Example4';
+import Intro4 from './Intro4';
 
 function App() {
-  const [activeExample, setActiveExample] = useState(4);
+  const [activeExample, setActiveExample] = useState(0);
 
-  const examples = [1, 2, 3, 4];
+  const examples = [0, 1, 2, 3, 4];
+  const labels = { 0: 'Intro', 1: 'Ex 1', 2: 'Ex 2', 3: 'Ex 3', 4: 'Ex 4' };
 
   return (
     <div>
@@ -42,11 +44,12 @@ function App() {
             }}
             aria-pressed={activeExample === n}
           >
-            Ex {n}
+            {labels[n]}
           </button>
         ))}
       </div>
 
+      {activeExample === 0 && <Intro4 onOpenExample={() => setActiveExample(4)} />}
       {activeExample === 1 && <Example1 />}
       {activeExample === 2 && <Example2 />}
       {activeExample === 3 && <Example3 />}
@@ -56,3 +59,4 @@ function App() {
 }
 
 export default App;
+

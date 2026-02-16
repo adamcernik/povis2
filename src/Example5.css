@@ -308,8 +308,7 @@ a:hover {
 }
 
 .btn-primary5:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(74, 126, 199, 0.3);
+    opacity: 0.88;
     text-decoration: none;
     color: white;
 }
@@ -660,8 +659,7 @@ a:hover {
 }
 
 .hero5-search-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(74, 126, 199, 0.35);
+    opacity: 0.88;
 }
 
 /* Hero map */
@@ -770,8 +768,7 @@ a:hover {
 }
 
 .agenda-card5:hover {
-    box-shadow: var(--p-shadow-hover);
-    transform: translateY(-4px);
+    box-shadow: var(--p-shadow);
 }
 
 .agenda-icon5 {
@@ -860,7 +857,6 @@ a:hover {
 .agenda-btn5:hover {
     background: var(--p-blue);
     color: white;
-    box-shadow: 0 4px 12px rgba(74, 126, 199, 0.25);
     text-decoration: none;
 }
 
@@ -935,8 +931,7 @@ a:hover {
 }
 
 .phase-card5:hover {
-    box-shadow: var(--p-shadow-hover);
-    transform: translateY(-4px);
+    box-shadow: var(--p-shadow);
 }
 
 .phase-icon5 {
@@ -1020,7 +1015,6 @@ a:hover {
 .phase-before .phase-btn5:hover {
     background: var(--p-blue);
     color: white;
-    box-shadow: 0 4px 12px rgba(74, 126, 199, 0.25);
 }
 
 .phase-during .phase-btn5 {
@@ -1031,7 +1025,6 @@ a:hover {
 .phase-during .phase-btn5:hover {
     background: var(--p-amber);
     color: white;
-    box-shadow: 0 4px 12px rgba(232, 168, 56, 0.25);
 }
 
 .phase-after .phase-btn5 {
@@ -1042,7 +1035,6 @@ a:hover {
 .phase-after .phase-btn5:hover {
     background: var(--p-green);
     color: white;
-    box-shadow: 0 4px 12px rgba(94, 168, 122, 0.25);
 }
 
 /* ===== MONITORING TILES ===== */
@@ -1088,8 +1080,7 @@ a:hover {
 }
 
 .monitoring-tile5:hover {
-    box-shadow: var(--p-shadow-hover);
-    transform: translateY(-3px);
+    box-shadow: var(--p-shadow);
     text-decoration: none;
 }
 
@@ -1144,7 +1135,6 @@ a:hover {
 
 .monitoring-tile5:hover .mon-arrow5 {
     color: var(--p-blue);
-    transform: translateX(3px);
 }
 
 /* ===== FOOTER ===== */
@@ -1184,7 +1174,6 @@ a:hover {
 
 .footer-link5:hover {
     color: white;
-    padding-left: 4px;
 }
 
 .footer-bottom5 {
@@ -1260,8 +1249,7 @@ a:hover {
 }
 
 .news-main5:hover {
-    box-shadow: var(--p-shadow-hover);
-    transform: translateY(-4px);
+    box-shadow: var(--p-shadow);
 }
 
 .news-main5 img {
@@ -1326,8 +1314,7 @@ a:hover {
 }
 
 .news-side-card5:hover {
-    box-shadow: var(--p-shadow-hover);
-    transform: translateY(-2px);
+    box-shadow: var(--p-shadow);
 }
 
 .news-side-card5 img {
@@ -1814,8 +1801,7 @@ a:hover {
 }
 
 .modal-btn-filled5:hover {
-    box-shadow: 0 8px 28px rgba(74, 126, 199, 0.35);
-    transform: translateY(-1px);
+    opacity: 0.88;
     text-decoration: none;
     color: white;
 }

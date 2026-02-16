@@ -3,13 +3,14 @@ import Example1 from './Example1';
 import Example2 from './Example2';
 import Example3 from './Example3';
 import Example4 from './Example4';
+import Example5 from './Example5';
 import Intro4 from './Intro4';
 
 function App() {
   const [activeExample, setActiveExample] = useState(0);
 
-  const examples = [0, 1, 2, 3, 4];
-  const labels = { 0: 'Intro', 1: 'Ex 1', 2: 'Ex 2', 3: 'Ex 3', 4: 'Ex 4' };
+  const examples = [0, 1, 2, 3, 4, 5];
+  const labels = { 0: 'Intro', 1: 'Ex 1', 2: 'Ex 2', 3: 'Ex 3', 4: 'Ex 4', 5: 'Ex 5' };
 
   return (
     <div>
@@ -54,6 +55,7 @@ function App() {
       {activeExample === 2 && <Example2 />}
       {activeExample === 3 && <Example3 />}
       {activeExample === 4 && <Example4 />}
+      {activeExample === 5 && <Example5 />}
     </div>
   );
 }

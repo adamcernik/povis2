@@ -384,7 +384,7 @@ function Example7() {
                                 <span className="hero7-badge">Povodňový informační systém</span>
                                 <h1>Portál povodňového informačního systému POVIS2</h1>
                                 <p>Spravujeme informace o povodňových rizicích, ochraně a postupech v mimořádných povodňových situacích. Pomáháme obcím, úřadům i veřejnosti se včas připravit a správně reagovat.</p>
-                                <div className="hero7-search" role="search" aria-label="Vyhledávání">
+                                <div className="hero7-search" role="search" aria-label="Ověření ohrožení místa">
                                     <input
                                         type="text"
                                         className="hero7-search-input"
@@ -394,7 +394,7 @@ function Example7() {
                                     <button
                                         className="hero7-search-btn"
                                         type="button"
-                                    >Hledat <span aria-hidden="true">→</span></button>
+                                    >Ověřit na mapě <span aria-hidden="true">→</span></button>
                                 </div>
                             </div>
                             <div className="hero7-map" aria-label="Interaktivní mapa České republiky">
@@ -453,6 +453,14 @@ function Example7() {
                                     <p>Evidence a vymezení záplavových území. Mapy aktivních zón a záplavových čar.</p>
                                     <div className="agenda-actions7">
                                         <a href="#" className="agenda-btn7">Zjistit více <span aria-hidden="true">→</span></a>
+                                        <a href="#" className="agenda-btn-map7" aria-label="Zobrazit záplavová území na mapě">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6" />
+                                                <line x1="8" y1="2" x2="8" y2="18" />
+                                                <line x1="16" y1="6" x2="16" y2="22" />
+                                            </svg>
+                                            Mapa
+                                        </a>
                                     </div>
                                 </article>
 
@@ -466,6 +474,14 @@ function Example7() {
                                     <p>Směrnice EU o zvládání povodňových rizik, úseky s významným povodňovým rizikem, plány a opatření.</p>
                                     <div className="agenda-actions7">
                                         <a href="#" className="agenda-btn7">Zjistit více <span aria-hidden="true">→</span></a>
+                                        <a href="#" className="agenda-btn-map7" aria-label="Zobrazit rizikové úseky na mapě">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6" />
+                                                <line x1="8" y1="2" x2="8" y2="18" />
+                                                <line x1="16" y1="6" x2="16" y2="22" />
+                                            </svg>
+                                            Mapa
+                                        </a>
                                     </div>
                                 </article>
 

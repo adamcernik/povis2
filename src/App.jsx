@@ -1,7 +1,7 @@
-import Example5 from './Example5';
+import Example6 from './Example6';
 
 function App() {
-  return <Example5 />;
+  return <Example6 />;
 }
 
 export default App;

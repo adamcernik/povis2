@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 .example7-root {
-    --p-blue: #358660;
+    --p-blue: #2d7a55;
     --p-blue-text: #256a47;
     --p-blue-soft: #e8f5ed;
     --p-blue-muted: #5aad7e;
-    --p-blue-deep: #1a5035;
+    --p-blue-deep: #1b5536;
     --p-mint: #86c9b8;
     --p-mint-soft: #e6f5f0;
     --p-lavender: #b8a9d4;
@@ -206,13 +206,13 @@ p {
     line-height: 1.6;
 }
 
-.example7-root a {
+:where(.example7-root) a {
     color: var(--p-blue-text);
     text-decoration: none;
     transition: color var(--p-transition);
 }
 
-.example7-root a:hover {
+:where(.example7-root) a:hover {
     color: var(--p-blue-deep);
     text-decoration: underline;
 }
@@ -321,7 +321,7 @@ p {
 }
 
 .btn-primary7:hover {
-    background: linear-gradient(135deg, var(--p-blue-deep), #123d28);
+    background: var(--p-blue-deep);
     text-decoration: none;
     color: white;
 }
@@ -672,7 +672,7 @@ p {
 }
 
 .hero7-search-btn:hover {
-    background: linear-gradient(135deg, var(--p-blue-deep), #123d28);
+    background: var(--p-blue-deep);
     text-decoration: none;
     color: white;
 }
@@ -870,7 +870,7 @@ p {
 }
 
 .agenda-btn7:hover {
-    background: var(--p-blue-deep);
+    background: var(--p-blue);
     color: white;
     text-decoration: none;
 }
@@ -1027,7 +1027,7 @@ p {
 }
 
 .phase-before .phase-btn7:hover {
-    background: var(--p-blue-deep);
+    background: var(--p-blue);
     color: white;
     text-decoration: none;
 }
@@ -1151,7 +1151,7 @@ p {
 }
 
 .monitoring-tile7:hover .mon-arrow7 {
-    color: var(--p-blue-deep);
+    color: var(--p-blue);
 }
 
 /* ===== FOOTER ===== */
@@ -1869,7 +1869,7 @@ p {
 }
 
 .modal-btn-filled7:hover {
-    background: linear-gradient(135deg, var(--p-blue-deep), #123d28);
+    background: var(--p-blue-deep);
     text-decoration: none;
     color: white;
 }

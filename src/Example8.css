@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 .example8-root {
     /* ===== DS gov.cz — Primary (Blue) ===== */
@@ -101,7 +101,7 @@ h4,
 h5,
 h6,
 p {
-    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif !important;
+    font-family: 'Roboto', 'Segoe UI', system-ui, sans-serif !important;
 }
 
 /* ===== EMERGENCY BANNER ===== */
@@ -218,7 +218,7 @@ p {
 }
 
 .example8-root {
-    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Roboto', 'Segoe UI', system-ui, sans-serif;
     color: var(--ds-neutral-950);
     background: var(--ds-bg);
     -webkit-font-smoothing: antialiased;

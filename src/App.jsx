@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import Example6 from './Example6';
 import Example7 from './Example7';
+import Example8 from './Example8';
 
 function App() {
   const [variant, setVariant] = useState('blue');
 
   return (
     <>
-      {variant === 'blue' ? <Example6 /> : <Example7 />}
+      {variant === 'blue' && <Example6 />}
+      {variant === 'green' && <Example7 />}
+      {variant === 'ds' && <Example8 />}
 
       <div style={{
         position: 'fixed',
@@ -58,6 +61,22 @@ function App() {
           }}
         >
           Zelená
+        </button>
+        <button
+          onClick={() => setVariant('ds')}
+          style={{
+            padding: '0.4rem 1rem',
+            border: 'none',
+            borderRadius: '999px',
+            cursor: 'pointer',
+            fontWeight: 600,
+            fontSize: '0.8rem',
+            transition: 'all 0.2s',
+            background: variant === 'ds' ? '#2362a2' : 'transparent',
+            color: variant === 'ds' ? '#fff' : '#94a3b8',
+          }}
+        >
+          DS gov.cz
         </button>
       </div>
     </>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-:root {
+.example7-root {
     --p-blue: #4a8c6f;
     --p-blue-text: #3a7d5c;
     --p-blue-soft: #e8f5ed;
@@ -173,7 +173,7 @@ p {
     border: 0;
 }
 
-*:focus-visible {
+.example7-root *:focus-visible {
     outline: 3px solid var(--p-blue) !important;
     outline-offset: 2px !important;
 }
@@ -197,7 +197,7 @@ p {
     }
 }
 
-body {
+.example7-root {
     font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
     color: var(--p-gray-900);
     background: var(--p-bg);
@@ -206,13 +206,13 @@ body {
     line-height: 1.6;
 }
 
-a {
+.example7-root a {
     color: var(--p-blue-text);
     text-decoration: none;
     transition: color var(--p-transition);
 }
 
-a:hover {
+.example7-root a:hover {
     color: var(--p-blue-deep);
     text-decoration: underline;
 }

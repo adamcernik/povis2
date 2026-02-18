@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --p-blue: #4a7ec7;
-    --p-blue-text: #3b6db5;
+    --p-blue: #3a6fbf;
+    --p-blue-text: #2b5a9e;
     --p-blue-soft: #e8f0fa;
-    --p-blue-muted: #a3c4e9;
-    --p-blue-deep: #3565a8;
+    --p-blue-muted: #6a9fd4;
+    --p-blue-deep: #1d4b87;
     --p-mint: #86c9b8;
     --p-mint-soft: #e6f5f0;
     --p-lavender: #b8a9d4;
@@ -321,7 +321,7 @@ a:hover {
 }
 
 .btn-primary6:hover {
-    opacity: 0.88;
+    background: linear-gradient(135deg, var(--p-blue-deep), #153a6b);
     text-decoration: none;
     color: white;
 }
@@ -672,7 +672,9 @@ a:hover {
 }
 
 .hero6-search-btn:hover {
-    opacity: 0.88;
+    background: linear-gradient(135deg, var(--p-blue-deep), #153a6b);
+    text-decoration: none;
+    color: white;
 }
 
 /* Hero map */
@@ -868,7 +870,7 @@ a:hover {
 }
 
 .agenda-btn6:hover {
-    background: var(--p-blue);
+    background: var(--p-blue-deep);
     color: white;
     text-decoration: none;
 }
@@ -1025,8 +1027,9 @@ a:hover {
 }
 
 .phase-before .phase-btn6:hover {
-    background: var(--p-blue);
+    background: var(--p-blue-deep);
     color: white;
+    text-decoration: none;
 }
 
 .phase-during .phase-btn6 {
@@ -1035,8 +1038,9 @@ a:hover {
 }
 
 .phase-during .phase-btn6:hover {
-    background: var(--p-amber);
+    background: #c48a1a;
     color: white;
+    text-decoration: none;
 }
 
 .phase-after .phase-btn6 {
@@ -1045,8 +1049,9 @@ a:hover {
 }
 
 .phase-after .phase-btn6:hover {
-    background: var(--p-green);
+    background: #3d8a5a;
     color: white;
+    text-decoration: none;
 }
 
 /* ===== MONITORING TILES ===== */
@@ -1140,13 +1145,13 @@ a:hover {
     margin-top: auto;
     padding-top: 0.75rem;
     font-size: 0.8rem;
-    color: var(--p-blue-muted);
+    color: var(--p-blue-text);
     font-weight: 600;
     transition: all var(--p-transition);
 }
 
 .monitoring-tile6:hover .mon-arrow6 {
-    color: var(--p-blue);
+    color: var(--p-blue-deep);
 }
 
 /* ===== FOOTER ===== */
@@ -1315,7 +1320,7 @@ a:hover {
 }
 
 .news-main-body6 h3 a:hover {
-    color: var(--p-blue);
+    color: var(--p-blue-deep);
     text-decoration: underline;
 }
 
@@ -1384,7 +1389,7 @@ a:hover {
 }
 
 .news-side-body6 h4 a:hover {
-    color: var(--p-blue);
+    color: var(--p-blue-deep);
     text-decoration: underline;
 }
 
@@ -1864,7 +1869,7 @@ a:hover {
 }
 
 .modal-btn-filled6:hover {
-    opacity: 0.88;
+    background: linear-gradient(135deg, var(--p-blue-deep), #153a6b);
     text-decoration: none;
     color: white;
 }

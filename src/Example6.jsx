@@ -33,7 +33,7 @@ function Example6() {
     );
 
     return (
-        <div className="example6-root">
+        <>
             <div>
                 <a href="#main-content" className="skip-link">Přeskočit na hlavní obsah</a>
 
@@ -679,7 +679,7 @@ function Example6() {
                     </div>
                 </div>
             )}
-        </div>
+        </>
     );
 }
 

@@ -1,0 +1,436 @@
+/* ===== Example9 — Minimal supplementary styles for DS gov.cz components ===== */
+
+.example9-root {
+    background: var(--gov-background-page, #f6f6f6);
+    min-height: 100vh;
+    font-family: Roboto, sans-serif;
+}
+
+.e9-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ===== EMERGENCY BANNER ===== */
+.e9-emergency {
+    background: var(--gov-color-error-600, #c62828);
+    color: #fff;
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.e9-emergency__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.e9-emergency a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.e9-emergency a:hover {
+    opacity: 0.85;
+}
+
+.e9-emergency strong {
+    font-weight: 700;
+}
+
+.e9-emergency__close {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.e9-emergency__close:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== HEADER ===== */
+.e9-header {
+    background: #fff;
+    border-bottom: 1px solid var(--gov-color-neutral-100, #e7e7e7);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.e9-header__divider {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--gov-color-neutral-100, #e7e7e7);
+}
+
+.e9-header__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.e9-header__logo:hover {
+    text-decoration: none;
+}
+
+.e9-header__logo:visited {
+    color: inherit;
+}
+
+.e9-header__mzp-logo {
+    height: 28px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.e9-header__divider-line {
+    width: 1px;
+    height: 24px;
+    background: var(--gov-color-neutral-200, #d1d1d1);
+    flex-shrink: 0;
+}
+
+.e9-header__brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--gov-color-primary-600, #2362a2);
+}
+
+.e9-header__tagline {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gov-color-neutral-500, #6d6d6d);
+}
+
+/* ===== LANGUAGE SWITCHER ===== */
+.e9-lang {
+    position: relative;
+}
+
+.e9-lang__toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.65rem;
+    background: var(--gov-color-neutral-50, #f6f6f6);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gov-color-neutral-600, #5d5d5d);
+}
+
+.e9-lang__toggle:hover {
+    background: var(--gov-color-neutral-100, #e7e7e7);
+}
+
+.e9-lang__dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--gov-color-neutral-100, #e7e7e7);
+    overflow: hidden;
+    min-width: 130px;
+    z-index: 60;
+}
+
+.e9-lang__dropdown button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.6rem 0.85rem;
+    background: none;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--gov-color-neutral-700, #4f4f4f);
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+}
+
+.e9-lang__dropdown button:hover {
+    background: var(--gov-color-primary-100, #e5eef9);
+}
+
+.e9-lang__dropdown button.active {
+    font-weight: 700;
+    color: var(--gov-color-primary-600, #2362a2);
+}
+
+/* ===== NAVIGATION ===== */
+.e9-nav {
+    padding: 0;
+}
+
+.e9-nav__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+.e9-nav__item {
+    position: relative;
+}
+
+.e9-nav__item > gov-button,
+.e9-nav__item > .gov-button {
+    white-space: nowrap;
+}
+
+/* Mega menu dropdown */
+.e9-mega {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--gov-color-neutral-100, #e7e7e7);
+    padding: 0.5rem 0;
+    min-width: 240px;
+    z-index: 50;
+    list-style: none;
+    margin: 0;
+}
+
+.e9-nav__item:hover .e9-mega,
+.e9-nav__item:focus-within .e9-mega {
+    display: block;
+}
+
+.e9-mega li {
+    list-style: none;
+}
+
+.e9-mega a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: var(--gov-color-neutral-700, #4f4f4f);
+    text-decoration: none;
+}
+
+.e9-mega a:hover {
+    background: var(--gov-color-primary-100, #e5eef9);
+    color: var(--gov-color-primary-700, #1e5086);
+}
+
+.e9-mega a:visited {
+    color: var(--gov-color-neutral-700, #4f4f4f);
+}
+
+.e9-nav__mobile-extras {
+    display: none;
+}
+
+/* ===== HAMBURGER ===== */
+.e9-hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.e9-hamburger__icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 22px;
+}
+
+.e9-hamburger__icon span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--gov-color-neutral-700, #4f4f4f);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.e9-hamburger__icon.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.e9-hamburger__icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.e9-hamburger__icon.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== SECTIONS ===== */
+.e9-section {
+    padding: 3rem 0;
+}
+
+.e9-section--alt {
+    background: var(--gov-color-neutral-50, #f6f6f6);
+}
+
+.e9-subtitle {
+    font-size: 1rem;
+    color: var(--gov-color-neutral-500, #6d6d6d);
+    margin-top: 0.25rem;
+}
+
+.e9-infobar-wrap {
+    padding-top: 1rem;
+}
+
+/* ===== FOOTER ===== */
+.e9-footer {
+    background: var(--gov-color-neutral-950, #262626);
+    color: #fff;
+    padding: 2.5rem 0 1.5rem;
+    margin-top: 1rem;
+}
+
+.e9-footer h5 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.e9-footer__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.e9-footer__list li {
+    list-style: none;
+}
+
+.e9-footer__address {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    color: var(--gov-color-neutral-300, #b0b0b0);
+}
+
+.e9-footer__address p {
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+
+.e9-footer__bottom {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gov-color-neutral-700, #4f4f4f);
+    font-size: 0.75rem;
+    color: var(--gov-color-neutral-400, #888888);
+}
+
+.e9-footer__logo {
+    height: 28px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+/* ===== HIDE MOBILE UTILITY ===== */
+.hide-mobile9 {
+    display: inline-flex;
+}
+
+/* ===== RESPONSIVE — TABLET ===== */
+@media (max-width: 900px) {
+    .e9-hamburger {
+        display: flex;
+        align-items: center;
+    }
+
+    .hide-mobile9 {
+        display: none !important;
+    }
+
+    .e9-nav {
+        display: none;
+    }
+
+    .e9-nav--open {
+        display: block;
+    }
+
+    .e9-nav__list {
+        flex-direction: column;
+        padding: 0.5rem 0;
+    }
+
+    .e9-mega {
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding: 0 0 0 1rem;
+        border-radius: 0;
+        min-width: 0;
+    }
+
+    .e9-nav__item:hover .e9-mega {
+        display: block;
+    }
+
+    .e9-nav__mobile-extras {
+        display: flex;
+        gap: 0.75rem;
+        padding: 0.75rem 0 1rem;
+        border-top: 1px solid var(--gov-color-neutral-100, #e7e7e7);
+        align-items: center;
+    }
+
+    .e9-header__tagline {
+        display: none;
+    }
+
+    .e9-header__divider-line {
+        display: none;
+    }
+}
+
+/* ===== RESPONSIVE — MOBILE ===== */
+@media (max-width: 600px) {
+    .e9-container {
+        padding: 0 1rem;
+    }
+
+    .e9-section {
+        padding: 2rem 0;
+    }
+
+    .e9-header__mzp-logo {
+        height: 22px;
+    }
+
+    .e9-emergency {
+        font-size: 0.75rem;
+    }
+}

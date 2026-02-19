@@ -48,24 +48,26 @@
     --p-transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-* {
+.example7-root *,
+.example7-root *::before,
+.example7-root *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-ul,
-ol,
-li {
+.example7-root ul,
+.example7-root ol,
+.example7-root li {
     list-style: none !important;
     list-style-type: none !important;
 }
 
-li::before,
-li::after,
-li::marker,
-ul::before,
-ul::after {
+.example7-root li::before,
+.example7-root li::after,
+.example7-root li::marker,
+.example7-root ul::before,
+.example7-root ul::after {
     content: none !important;
     display: none !important;
     width: 0 !important;
@@ -74,13 +76,13 @@ ul::after {
     border: none !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h7,
-p {
+.example7-root h1,
+.example7-root h2,
+.example7-root h3,
+.example7-root h4,
+.example7-root h5,
+.example7-root h7,
+.example7-root p {
     font-family: 'Inter', 'Segoe UI', system-ui, sans-serif !important;
 }
 
@@ -189,9 +191,9 @@ p {
 
 @media (prefers-reduced-motion: reduce) {
 
-    *,
-    *::before,
-    *::after {
+    .example7-root *,
+    .example7-root *::before,
+    .example7-root *::after {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
     }

@@ -68,24 +68,26 @@
     --ds-transition: 150ms ease-in-out;
 }
 
-* {
+.example8-root *,
+.example8-root *::before,
+.example8-root *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-ul,
-ol,
-li {
+.example8-root ul,
+.example8-root ol,
+.example8-root li {
     list-style: none !important;
     list-style-type: none !important;
 }
 
-li::before,
-li::after,
-li::marker,
-ul::before,
-ul::after {
+.example8-root li::before,
+.example8-root li::after,
+.example8-root li::marker,
+.example8-root ul::before,
+.example8-root ul::after {
     content: none !important;
     display: none !important;
     width: 0 !important;
@@ -94,13 +96,13 @@ ul::after {
     border: none !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+.example8-root h1,
+.example8-root h2,
+.example8-root h3,
+.example8-root h4,
+.example8-root h5,
+.example8-root h6,
+.example8-root p {
     font-family: 'Roboto', sans-serif !important;
 }
 
@@ -211,9 +213,9 @@ p {
 
 @media (prefers-reduced-motion: reduce) {
 
-    *,
-    *::before,
-    *::after {
+    .example8-root *,
+    .example8-root *::before,
+    .example8-root *::after {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
     }

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-:root {
+.example6-root {
     --p-blue: #3a6fbf;
     --p-blue-text: #2b5a9e;
     --p-blue-soft: #e8f0fa;
@@ -48,24 +48,26 @@
     --p-transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-* {
+.example6-root *,
+.example6-root *::before,
+.example6-root *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-ul,
-ol,
-li {
+.example6-root ul,
+.example6-root ol,
+.example6-root li {
     list-style: none !important;
     list-style-type: none !important;
 }
 
-li::before,
-li::after,
-li::marker,
-ul::before,
-ul::after {
+.example6-root li::before,
+.example6-root li::after,
+.example6-root li::marker,
+.example6-root ul::before,
+.example6-root ul::after {
     content: none !important;
     display: none !important;
     width: 0 !important;
@@ -74,13 +76,13 @@ ul::after {
     border: none !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+.example6-root h1,
+.example6-root h2,
+.example6-root h3,
+.example6-root h4,
+.example6-root h5,
+.example6-root h6,
+.example6-root p {
     font-family: 'Inter', 'Segoe UI', system-ui, sans-serif !important;
 }
 
@@ -173,7 +175,7 @@ p {
     border: 0;
 }
 
-*:focus-visible {
+.example6-root *:focus-visible {
     outline: 3px solid var(--p-blue) !important;
     outline-offset: 2px !important;
 }
@@ -189,15 +191,15 @@ p {
 
 @media (prefers-reduced-motion: reduce) {
 
-    *,
-    *::before,
-    *::after {
+    .example6-root *,
+    .example6-root *::before,
+    .example6-root *::after {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
     }
 }
 
-body {
+.example6-root {
     font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
     color: var(--p-gray-900);
     background: var(--p-bg);
@@ -206,13 +208,13 @@ body {
     line-height: 1.6;
 }
 
-a {
+.example6-root a {
     color: var(--p-blue-text);
     text-decoration: none;
     transition: color var(--p-transition);
 }
 
-a:hover {
+.example6-root a:hover {
     color: var(--p-blue-deep);
     text-decoration: underline;
 }
